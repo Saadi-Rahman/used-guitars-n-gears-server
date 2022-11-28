@@ -1,0 +1,20 @@
+[
+    {
+        "_id": "01",
+        "category_name": "Acoustic Guitars",
+        "description": "Acoustic guitars remain one of the most popular means of making music in the world and for good reason. These iconic instruments produce a rich, engrossing sound that can lead a band, accompany a singing ensemble, or inspire you to write that next hit.",
+        "image": "https://i.postimg.cc/DZzqD1mW/guitar1.png"
+    },
+    {
+        "_id": "02",
+        "category_name": "Electric Guitars",
+        "description": "Electric stringed instruments most traditionally played by being worn over the shoulder (or balanced on the knee), fretted with one hand, and plucked or strummed with the other. When the strings are played, magnetic pickups take the sound and send it to an amplifier to make it louder.",
+        "image": "https://i.postimg.cc/CK7GmcMT/guitar2.png"
+    },
+    {
+        "_id": "03",
+        "category_name": "Bass Guitars",
+        "description": "Bass has always been one of the most integral parts of any ensemble, and over the past several decades, the guitar form of this low-end instrument has worked its way into most every genre. Here on Used Guitars N Gears, browse one of the widest selections of new, used, and vintage bass guitars anywhere in the world.",
+        "image": "https://i.postimg.cc/0QHpqrJV/guitar3.png"
+    }
+]
