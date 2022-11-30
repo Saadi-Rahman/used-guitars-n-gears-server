@@ -2,6 +2,7 @@
     {
         "_id": "p01",
         "category_id": "01",
+        "category_name": "Acoustic Guitars",
         "title": "Lindo PBEQ Piebald Burl Ash Electro-Acoustic Guitar",
         "resale_price": "210.50",
         "original_price": "378.96",
@@ -18,6 +19,7 @@
     {
         "_id": "p02",
         "category_id": "01",
+        "category_name": "Acoustic Guitars",
         "title": "Taylor 512ce Grand Concert Electro Acoustic Guitar",
         "resale_price": "2,250",
         "original_price": "3,299",
@@ -34,6 +36,7 @@
     {
         "_id": "p03",
         "category_id": "01",
+        "category_name": "Acoustic Guitars",
         "title": "Martin Dreadnought Jr Electro Acoustic, Spruce",
         "resale_price": "349.50",
         "original_price": "639.50",
@@ -50,6 +53,7 @@
     {
         "_id": "p04",
         "category_id": "02",
+        "category_name": "Electric Guitars",
         "title": "Fender Made in Japan Telecaster 1989-1990 Blonde",
         "resale_price": "587.44",
         "original_price": "744.15",
@@ -66,6 +70,7 @@
     {
         "_id": "p05",
         "category_id": "02",
+        "category_name": "Electric Guitars",
         "title": "Gibson Custom Shop Les Paul Standard 2007",
         "resale_price": "9,863.32",
         "original_price": "1,2500.45",
@@ -82,6 +87,7 @@
     {
         "_id": "p06",
         "category_id": "02",
+        "category_name": "Electric Guitars",
         "title": "FENDER CUSTOM SHOP 4/54 BLACKGUARD TELE BLONDE",
         "resale_price": "4,760.50",
         "original_price": "6,120.99",
@@ -98,6 +104,7 @@
     {
         "_id": "p07",
         "category_id": "02",
+        "category_name": "Electric Guitars",
         "title": "Gibson Custom Shop 1959 Les Paul Standard",
         "resale_price": "9,611.68",
         "original_price": "639.00",
@@ -114,6 +121,7 @@
     {
         "_id": "p08",
         "category_id": "03",
+        "category_name": "Bass Guitars",
         "title": "2021 Fender Player Series Precision Bass Buttercream",
         "resale_price": "699.77",
         "original_price": "849.99",
@@ -130,6 +138,7 @@
     {
         "_id": "p09",
         "category_id": "03",
+        "category_name": "Bass Guitars",
         "title": "EPIPHONE SG BASS (EB-3; 2-PICKUP) - CHERRY",
         "resale_price": "349.50",
         "original_price": "449.99",
@@ -146,6 +155,7 @@
     {
         "_id": "p10",
         "category_id": "03",
+        "category_name": "Bass Guitars",
         "title": "Second Hand Ibanez SRX705 5 String Bass Guitar",
         "resale_price": "895.95",
         "original_price": "1039.50",
@@ -162,6 +172,7 @@
     {
         "_id": "p11",
         "category_id": "03",
+        "category_name": "Bass Guitars",
         "title": "Bacchus Global Series WL5 ASH STB Jazz Bass",
         "resale_price": "849.50",
         "original_price": "1,055.43",
@@ -178,6 +189,7 @@
     {
         "_id": "p12",
         "category_id": "03",
+        "category_name": "Bass Guitars",
         "title": "Cort Artisan Series A5PLUSFMMHOPN 5-String Bass",
         "resale_price": "1,189.90",
         "original_price": "1,395.45",
@@ -185,7 +197,7 @@
         "condition_type": "Mint",
         "year_of_purchase": "2022",
         "years_of_use": "1 Year",
-        "seller_name": "Les Claypool",
+        "seller_name": "John Entwistle",
         "posted_time": "30 Nov 2022",
         "location": "Castro Valley, California, USA",
         "image_url": "https://i.postimg.cc/yxtX0W1D/bass5.jpg",
