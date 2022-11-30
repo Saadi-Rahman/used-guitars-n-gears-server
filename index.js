@@ -15,13 +15,12 @@ app.use(express.json());
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.rf7qboo.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
-// const categories = require('./data/categories.json');
-// const products = require('./data/products.json');
 
 async function run(){
     try{
         const categoriesCollection = client.db('usedGuitarsNGears').collection('categories');
         const productsCollection = client.db('usedGuitarsNGears').collection('products');
+        const bookingsCollection = client.db('usedGuitarsNGears').collection('bookings');
 
         app.get('/categories', async(req, res) => {
             const query = {};
@@ -32,7 +31,6 @@ async function run(){
 
         app.get('/categories/:name', async(req, res) =>{
             const name = req.params.name;
-            console.log(name);
             const query = { category_name: name };
             const products = await productsCollection.find(query).toArray();
             res.send(products);
@@ -52,6 +50,14 @@ async function run(){
             res.send(products);
         });
 
+
+        app.post('/bookings', async(req, res) =>{
+            const booking = req.body 
+            console.log(booking);
+            const result = bookingsCollection.insertOne(booking);
+            res.send(result);
+        })
+
     }
     finally{
 
@@ -63,26 +69,6 @@ run().catch(console.log);
 app.get('/', (req, res) => {
     res.send('Used Guitars N Gears API is Running...');
 });
-
-
-// app.get('/product-categories', (req, res) => {
-//     res.send(categories);
-// });
-
-
-// app.get('/category/:id', (req, res) => {
-//     const id = req.params.id;
-//     const category_products = products.filter( p => p.category_id === id);
-//     res.send(category_products);
-// })
-
-
-// app.get('/products/:id', (req, res) => {
-//     const id = req.params.id;
-//     const selectedProduct = products.find( p => p._id === id);
-//     res.send(selectedProduct);
-// })
-
 
 app.listen(port, () => {
     console.log(`Used Guitars N Gears Server is running on port: ${port}`);
