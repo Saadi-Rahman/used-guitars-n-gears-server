@@ -30,11 +30,19 @@ async function run(){
             res.send(categories);
         });
 
-        app.get('/category/:id', async(req, res) =>{
-            const id = req.params.id;
-            const query = { _id: ObjectId(id) };
-            const category = await categoriesCollection.findOne(query);
-            res.send(category);
+        app.get('/categories/:name', async(req, res) =>{
+            const name = req.params.name;
+            console.log(name);
+            const query = { category_name: name };
+            const products = await productsCollection.find(query).toArray();
+            res.send(products);
+        });
+
+        app.get('/products', async(req, res) => {
+            const query = {};
+            const cursor = productsCollection.find(query);
+            const products = await cursor.toArray();
+            res.send(products);
         });
 
         app.get('/products/:id', async(req, res) =>{
