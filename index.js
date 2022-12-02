@@ -44,6 +44,7 @@ async function run(){
         const productsCollection = client.db('usedGuitarsNGears').collection('products');
         const bookingsCollection = client.db('usedGuitarsNGears').collection('bookings');
         const usersCollection = client.db('usedGuitarsNGears').collection('users');
+        const newProductsCollection = client.db('usedGuitarsNGears').collection('newProducts');
 
         // get API to show all categories on the Home page
         app.get('/categories', async(req, res) => {
@@ -154,6 +155,20 @@ async function run(){
             const result = await usersCollection.updateOne(filter, updatedDoc, options);
             res.send(result);
           });
+
+          // get API to show all newProducts on My Products page
+          app.get('/newProducts', async(req, res) =>{
+            const query = {};
+            const newProducts = await newProductsCollection.find(query).toArray();
+            res.send(newProducts);
+          });
+
+          // post API for newProducts Collection
+          app.post('/newProducts', async(req, res) =>{
+            const newProduct = req.body;
+            const result = await newProductsCollection.insertOne(newProduct);
+            res.send(result);
+          })
 
     }
     finally{
