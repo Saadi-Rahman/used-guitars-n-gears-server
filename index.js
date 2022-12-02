@@ -108,7 +108,14 @@ async function run(){
                 return res.send({accessToken: token});
             }
             res.status(403).send({accessToken: ''});
-        })
+        });
+
+        // get API to show allUsers data in dashboard page
+        app.get('/users', async(req, res) =>{
+            const query = {};
+            const users = await usersCollection.find(query).toArray();
+            res.send(users);
+        });
 
         // post API to send users data to MongoDB
         app.post('/users', async(req, res) =>{
@@ -116,7 +123,8 @@ async function run(){
             console.log(user);
             const result = await usersCollection.insertOne(user);
             res.send(result);
-        })
+        });
+
 
     }
     finally{
