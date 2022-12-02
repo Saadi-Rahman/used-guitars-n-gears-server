@@ -117,6 +117,14 @@ async function run(){
             res.send(users);
         });
 
+        // get API to check a user isAdmin or not
+        app.get('/users/admin/:email', async(req, res) => {
+            const email = req.params.email;
+            const query = { email };
+            const user = await usersCollection.findOne(query);
+            res.send({isAdmin: user?.role === 'admin'});
+          });
+
         // post API to send users data to MongoDB
         app.post('/users', async(req, res) =>{
             const user = req.body;
