@@ -170,6 +170,14 @@ async function run(){
             res.send(result);
           })
 
+          // delete API for newProducts Collection
+          app.delete('/newProducts/:id', async(req, res) =>{
+            const id = req.params.id;
+            const filter = { _id: ObjectId(id) };
+            const result = await newProductsCollection.deleteOne(filter);
+            res.send(result);
+          })
+
     }
     finally{
 
